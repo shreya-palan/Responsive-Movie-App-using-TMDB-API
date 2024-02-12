@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+### App.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App.js sets up the structure of the React application, handling routing through the react-router-dom library. It imports various components, including the main Header, Home, MovieList, and Movie components, and defines how they should be rendered based on the URL paths. The App component acts as the entry point for the application, rendering the overall structure and layout.
 
-## Available Scripts
+### Header.js
 
-In the project directory, you can run:
+Header.js defines a React component (Header) responsible for rendering the header section of your application. It includes a logo and navigation links created using the Link component from react-router-dom. The component is styled using an associated CSS file, and it is exported for use in other parts of the application.
 
-### `npm start`
+### Home.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Home.js defines a React component (Home) responsible for rendering the home page of your movie application. It fetches popular movies from the TMDB API, displays them in a carousel using the react-responsive-carousel library, and provides links to view more details about each movie. The component is styled using an associated CSS file, and it also renders the MovieList component below the carousel.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Card.js
 
-### `npm test`
+Card.js is a React component that provides a movie card with dynamic content fetched from the movie prop. It includes a loading skeleton for a better user experience during data fetching. The component is styled using an associated CSS file (card.css).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### MovieList.js
 
-### `npm run build`
+MovieList.js is a React component that fetches and displays a list of movies based on a specified category or type. It uses the Card component to render individual movie cards and dynamically updates the displayed movies when the category changes. The component is styled using an associated CSS file (movieList.css).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Movie.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Movie.js is a React component responsible for displaying detailed information about a specific movie. It fetches data from the TMDB API based on the movie ID provided in the URL, and it presents the information in a structured layout. The component is styled using an associated CSS file (movie.css).
